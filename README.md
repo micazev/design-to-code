@@ -1,5 +1,7 @@
+Running via netlify [here](https://mastertattoo-landpage.netlify.app)
 
-Dribble original [Here](https://dribbble.com/shots/12137524-Tattoo-Artist-website-landing-page-design-interaction).
+Dribble original design: [Here](https://dribbble.com/shots/12137524-Tattoo-Artist-website-landing-page-design-interaction).
+
 
 # Getting Started with Create React App
 

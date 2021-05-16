@@ -8,7 +8,7 @@ import AboutSection from './components/AboutSection';
 import { HeroSection } from './components/HeroSection';
 import StepsSection from './components/StepsSection';
 import Footer from './components/Footer';
-// import TestimonialsSection from './components/Testimonials';
+import TestimonialsSection from './components/Testimonials';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       <HeroSection />
       <AboutSection />
       <StepsSection />
-      {/* <TestimonialsSection /> */}
+      <TestimonialsSection />
       <Footer />
     </div>
   );

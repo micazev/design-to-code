@@ -9,7 +9,7 @@ function StepsSection() {
   return (
     <StepsStyles  className="sections">
     <Illustration>
-      <img src={girl} />
+      {/* <img src={girl} /> */}
     </Illustration>
      <Content>
        <div><span className="tag">3 easy steps</span></div>
@@ -34,11 +34,14 @@ function StepsSection() {
 export default StepsSection
 
 const StepsStyles = styled.div`
-  /* background: url(${girl}) no-repeat left;   */
+  background: url(${girl}) no-repeat left;
+  background-position: left center;
+  background-size: contain;  
   margin-top: 200px;
   text-align: left;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:1fr 1fr;
+  /* max-height: 50vh; */
   h1{
     font-weight: bold;
     margin-bottom: 5vh;
@@ -74,18 +77,18 @@ const StepsStyles = styled.div`
     }
   }
   ` 
-
-  const Steps = [
-    {
-      title: '',
-      desc: ''
-    },
-    {
-      title: '',
-      desc: ''
-    },
-    {
-      title: '',
-      desc: ''
-    }
-  ]
+// eslint-disable-next-line
+  // const Steps = [
+  //   {
+  //     title: '',
+  //     desc: ''
+  //   },
+  //   {
+  //     title: '',
+  //     desc: ''
+  //   },
+  //   {
+  //     title: '',
+  //     desc: ''
+  //   }
+  // ]

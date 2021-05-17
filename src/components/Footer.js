@@ -1,28 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const FooterStyles = styled.div`
-width: 100%;
-  background-color: #373737;
-  color: #cccccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  a {
-    color: #cccccc;
-  }
-  ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-`
+
 
 export default function Footer() {
   return (
     <FooterStyles>
-      <a href="https://dribbble.com/shots/12137524-Tattoo-Artist-website-landing-page-design-interaction/attachments/3767899?mode=media">Tatoo master.</a>
-      <ul>
+      <a className="logo" href="https://dribbble.com/shots/12137524-Tattoo-Artist-website-landing-page-design-interaction/attachments/3767899?mode=media">Tatoo master.</a>
+      <ul className="menu">
         <li>
           <a href="/">About</a>
         </li>
@@ -40,3 +25,25 @@ export default function Footer() {
     </FooterStyles>
   );
 }
+
+const FooterStyles = styled.div`
+  width: 100%;
+  height: 80px;
+  padding: 5px 30px;
+  background-color: #373737;
+  color: #cccccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    color: #cccccc;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .logo{
+   color: white;
+  }
+`

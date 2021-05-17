@@ -62,8 +62,6 @@ const NavStyles = styled.nav`
     height: auto;
   }
   .logo{
-    font-size: 1.2rem;
-    font-weight: bold;
     color: #221f20;
   }
 `;

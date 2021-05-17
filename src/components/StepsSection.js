@@ -1,11 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import girl from '../assets/steps-image.png'
+import arrow from '../assets/down-arrow.svg'
 
-function StepsSection() {
-  const [showContent, setShowContent] = React.useState(false)
-  const onClick = () => setShowContent(true)
-
+class StepsSection extends React.Component{
+  constructor() {
+    super();
+    this.state = {
+      show: true
+    }
+  }
+render() {
   return (
     <StepsStyles  className="sections">
     <Illustration>
@@ -15,20 +20,18 @@ function StepsSection() {
        <div><span className="tag">3 easy steps</span></div>
       <h1>How it works</h1>
       <ul>
-        <li>
-          <div onClick={onClick} className="dropdown"><h2>1. Download Tattoo master app (dropdown)</h2>seta</div>
-          { showContent ? <p>Download the application in App Store and you acan find the wizard in any location around the world. </p> : null}
-      </li>
-        <li><div onClick={onClick} className="dropdown"><h2>2. Enter your location</h2>seta</div>
-        { showContent ?  <p>Download the application in App Store and you acan find the wizard in any location around the world. </p> : null}
-        </li>
-        <li><div onClick={onClick}  className="dropdown"><h2>3. Find your tattoo mester</h2>seta</div>
-        { showContent ? <p>Download the application in App Store and you acan find the wizard in any location around the world. </p> : null}
-        </li>
+        {Steps.map((lista, i)=>(
+        <li key={i}>
+        <div key={i} onClick={()=>{this.setState({show:!this.state.show})}} className="dropdown"><h2>{lista.title}</h2><img src={arrow} alt="" /></div>
+        { this.state.show? <p>{lista.desc}</p> : null}
+    </li>
+        ))}
+        
       </ul>
      </Content>
   </StepsStyles>
   )
+}
 }
 
 export default StepsSection
@@ -40,6 +43,7 @@ const StepsStyles = styled.div`
   margin-top: 200px;
   text-align: left;
   display: grid;
+  height: 50vh;
   grid-template-columns:1fr 1fr;
   /* max-height: 50vh; */
   h1{
@@ -55,6 +59,10 @@ const StepsStyles = styled.div`
   const Content = styled.div`
   grid: 2;
   text-align: left;
+  img {
+    max-width: 10px;
+    max-height: 10px;
+  }
   h2{
     font-weight: bold;
     font-size: 16px;
@@ -77,18 +85,17 @@ const StepsStyles = styled.div`
     }
   }
   ` 
-// eslint-disable-next-line
-  // const Steps = [
-  //   {
-  //     title: '',
-  //     desc: ''
-  //   },
-  //   {
-  //     title: '',
-  //     desc: ''
-  //   },
-  //   {
-  //     title: '',
-  //     desc: ''
-  //   }
-  // ]
+  const Steps = [
+    {
+      title: '1. Download Tattoo master app (dropdown)',
+      desc: 'Download the application in App Store and you acan find the wizard in any location around the world. '
+    },
+    {
+      title: '2. Enter your location',
+      desc: 'Download the application in App Store and you acan find the wizard in any location around the world.'
+    },
+    {
+      title: '3. Find your tattoo master',
+      desc: 'Download the application in App Store and you acan find the wizard in any location around the world.'
+    }
+  ]

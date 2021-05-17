@@ -12,14 +12,16 @@ import { TryApp } from './components/TryApp';
 
 function App() {
   return (
-    <div className="">
+    <div>
       <GlobalStyles />
       <Nav />
+
       <HeroSection />
       <AboutSection />
       <StepsSection />
       <TestimonialsSection />
       <TryApp />
+
       <Footer />
     </div>
   );

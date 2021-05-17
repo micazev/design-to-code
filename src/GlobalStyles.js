@@ -15,12 +15,13 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     font-size: 14px;
+    box-sizing: border-box;
   }
 
   body {
     font-size: 1rem;
     width: 100vw;
-    max-width: 2000px;
+    max-width: 1200px;
     min-height: 100vh;
     overflow-x: hidden;
     margin: 0 auto;
@@ -71,12 +72,13 @@ const GlobalStyles = createGlobalStyle`
     width: 120px;
     background: var(--black);
     color: white;
+    font-weight: bold;
     border: 0;
     
     border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     --cast: 2px;
     box-shadow: var(--cast) var(--cast) 0 var(--grey);

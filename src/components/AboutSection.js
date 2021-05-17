@@ -9,7 +9,7 @@ import icon4 from '../assets/icon4.png'
 export default function AboutSection() {
   return (
 <AboutStyles  className="sections">
-  <div><span className="tag">about</span></div>
+  <div className="center"><span className="tag">about</span></div>
   <h1>Worldwide community</h1>
 
   <Features>
@@ -45,7 +45,9 @@ const AboutStyles = styled.div`
   max-width: 100vw; 
   display: grid;
   justify-content: center;
-
+  .center {
+    margin: 0 auto;
+  }
   h1{
     text-align: center;
     margin-top: 20px;

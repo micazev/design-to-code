@@ -7,22 +7,23 @@ class StepsSection extends React.Component{
   constructor() {
     super();
     this.state = {
-      show: true
+      show: false
     }
   }
+
+
+
 render() {
   return (
     <StepsStyles  className="sections">
-    <Illustration>
-      {/* <img src={girl} /> */}
-    </Illustration>
+    <Illustration />
      <Content>
        <div><span className="tag">3 easy steps</span></div>
       <h1>How it works</h1>
       <ul>
         {Steps.map((lista, i)=>(
         <li key={i}>
-        <div key={i} onClick={()=>{this.setState({show:!this.state.show})}} className="dropdown"><h2>{lista.title}</h2><img src={arrow} alt="" /></div>
+        <div key={i} onClick={()=>{this.setState((state, props) => ({show:!this.state.show}))}} className="dropdown"><h2>{lista.title}</h2><img src={arrow} alt="" /></div>
         { this.state.show? <p>{lista.desc}</p> : null}
     </li>
         ))}
@@ -87,7 +88,7 @@ const StepsStyles = styled.div`
   ` 
   const Steps = [
     {
-      title: '1. Download Tattoo master app (dropdown)',
+      title: '1. Download Tattoo master app',
       desc: 'Download the application in App Store and you acan find the wizard in any location around the world. '
     },
     {

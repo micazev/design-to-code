@@ -14,22 +14,22 @@ export default function AboutSection() {
 
   <Features>
   <Box>
-      <img className="icons" src={icon2} />
+      <img className="icons" alt="icons" src={icon2} />
         <h3>All over the world</h3>
         <p>We bring togheter masters from around the world.</p>
       </Box>
     <Box>
-    <img className="icons" src={icon3} />
+    <img className="icons" alt="icons" src={icon3} />
       <h3>Any style</h3>
       <p>Masters work in different styles - blackworks, watercolor, traditional, new school.</p>
     </Box>
       <Box>
-      <img className="icons" src={icon1} />
+      <img className="icons" alt="icons" src={icon1} />
         <h3>Best tattoo masters</h3>
         <p>Tattoo artistis are tested and certified - you are in safe hands.</p>
       </Box>
       <Box>
-      <img className="icons" src={icon4} />
+      <img className="icons" alt="icons" src={icon4} />
         <h3>Real customer reviews</h3>
         <p>You can leave reviews and photos in the application - see the tattoos of other users and choose your master.</p>
       </Box>
@@ -91,26 +91,3 @@ const Box = styled.div`
     max-width: 250px;
   }
 `
-
-const features = [
-  {
-    img: '',
-    title: '',
-    text: ''
-  },
-  {
-    img: '',
-    title: '',
-    text: ''
-  },
-  {
-    img: '',
-    title: '',
-    text: ''
-  },
-  {
-    img: '',
-    title: '',
-    text: ''
-  }
-]

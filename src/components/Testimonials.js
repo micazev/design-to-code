@@ -11,9 +11,7 @@ import avatar2 from '../assets/avatar2.png'
 function TestimonialsSection() {
   return (
     <TestimonialsStyles className="sections">
-    <Illustration>
-      {/* <img src={girl} /> */}
-    </Illustration>
+    <Illustration />
   
  <Content>
 
@@ -47,18 +45,6 @@ function TestimonialsSection() {
  </Box>
  </Boxes>
  </Content>
-
-
-      {/* <Box>  {testimonials.map((i, t) => {
-   
-  // <img src={t.img} alt="tatoo pic" />
-  // <img src={t.avatar} alt="avatar" />
-  <h2>{t.name}</h2>
-  <p>{t.comment}</p>
-
-
-      })}  </Box> */}
-   
     </TestimonialsStyles>
   )
 }
@@ -139,19 +125,3 @@ const BoxInfo = styled.div`
   }
  
 `
-
-
-const testimonials = [
-    { 
-      img: '',
-      avatar: '',
-      name: 'Kate Mida',
-      comment: 'The tattoo I made in Berlim, Im delight!'
-    },
-    { 
-      img: '',
-      avatar: '',
-      name: 'Larry Perry',
-      comment: 'Misa is very kind master. I had a difficult order but it was fine!'
-    }
-]

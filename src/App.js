@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import styled from 'styled-components'
 import GlobalStyles from './GlobalStyles';
 
 import Nav from './components/Navbar';

@@ -44,15 +44,11 @@ const NavStyles = styled.nav`
     list-style: none;
     align-items: center;
     display: flex;
-    gap: 20px;
+    gap: 10px;
   }
   a {
-    /* font-size: 3rem; */
     text-decoration: none;
     color: var(--dark-gray);
-    &: hover {
-      color: var(--red);
-    }
   }
 
   img {

@@ -1,17 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 import girl from '../assets/steps-image.png'
-import arrow from '../assets/down-arrow.svg'
+import arrowdown from '../assets/arrow-down.png'
+import arrowup from '../assets/arrow-up.png'
 
 class StepsSection extends React.Component{
   constructor() {
     super();
     this.state = {
-      show: false
+      arrowUp: false
     }
   }
 
-
+changeArrow = () => {
+  this.setState({
+    arrowUp: !this.state.arrowUp
+  })
+  }
 
 render() {
   return (
@@ -22,10 +27,20 @@ render() {
       <h1>How it works</h1>
       <ul>
         {Steps.map((lista, i)=>(
-        <li key={i}>
-        <div key={i} onClick={()=>{this.setState((state, props) => ({show:!this.state.show}))}} className="dropdown"><h2>{lista.title}</h2><img src={arrow} alt="" /></div>
-        { this.state.show? <p>{lista.desc}</p> : null}
-    </li>
+          <li key={i}>
+ <details>
+ <summary key={i} className='dropdown' onClick={this.changeArrow}>{lista.title}
+ {this.state.arrowUp ? <img src={arrowup}  /> : <img src={arrowdown}  />}
+  </summary>
+ <div className='description'>
+   {lista.desc}
+ </div>
+</details>
+</li>
+        
+        // <div onClick={()=>{this.setState((state, props) => ({show:!this.state.show}))}} className="dropdown"><h2>{lista.title}</h2><img src={arrow} alt="" /></div>
+        // { this.state.show? <p>{lista.desc}</p> : null}
+    
         ))}
         
       </ul>
@@ -36,6 +51,8 @@ render() {
 }
 
 export default StepsSection
+
+
 
 const StepsStyles = styled.div`
   background: url(${girl}) no-repeat left;
@@ -78,11 +95,34 @@ const StepsStyles = styled.div`
     ::last-child{
       border-bottom: none;
     }
+
+  details {
+    font: 16px "Open Sans", "Arial", sans-serif;
+    width: 100%;
+  }
+
+  details > summary {
+  
+   font-weight: bold;
+  }
+
+  details > p {
+    border-radius: 0 0 10px 10px;
+    background-color: #ddd;
+    padding: 2px 6px;
+    margin: 0;
+    box-shadow: 3px 3px 4px black;
+    color: var(--light-gray);
+  }
     .dropdown {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 10px;
+    }
+    .description {
+      padding-top: 20px;
+      color: var(--light-gray);
     }
   }
   ` 

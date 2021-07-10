@@ -46,9 +46,13 @@ const NavStyles = styled.nav`
     display: flex;
     gap: 10px;
   }
-  a {
+  li a {
     text-decoration: none;
+    padding-right: 10px;
     color: var(--dark-gray);
+  }
+  li a:last-child {
+  padding-right: none;
   }
 
   img {

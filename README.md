@@ -1,18 +1,27 @@
-Running via netlify [here](https://mastertattoo-landpage.netlify.app)
+# MasterTattoo Landing Page
 
-Dribble original design: [Here](https://dribbble.com/shots/12137524-Tattoo-Artist-website-landing-page-design-interaction).
+Experience the landing page live on Netlify: [https://mastertattoo-landpage.netlify.app](https://mastertattoo-landpage.netlify.app).
 
+**Inspired by**: The original design on Dribbble can be found [here](https://dribbble.com/shots/12137524-Tattoo-Artist-website-landing-page-design-interaction).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was initialized using [Create React App](https://github.com/facebook/create-react-app).
 
-### Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To set up and run this project locally:
 
-#### `yarn start`
+1. **Clone the repository** to your machine.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. **Navigate** to the project directory and run:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+
+   ```bash
+   npm start
+   ```
+
+This will run the app in development mode. Simply open [http://localhost:3000](http://localhost:3000) on your browser to view it. During development, the page will auto-reload whenever you make changes. Keep an eye on the console for any lint errors.

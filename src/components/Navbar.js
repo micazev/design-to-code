@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import appstore from '../assets/appstore.jpg';
+import React from "react";
+import styled from "styled-components";
+import appstore from "../assets/appstore.jpg";
 
 export default function Nav() {
   return (
     <NavStyles>
-      <a className="logo" href="https://dribbble.com/shots/12137524-Tattoo-Artist-website-landing-page-design-interaction">
+      <a className="logo" href="#">
         Tattoo master.
       </a>
       <ul>
@@ -23,11 +23,12 @@ export default function Nav() {
           <a href="#our app">Our app</a>
         </li>
       </ul>
-      <a href="/"><img src={appstore} alt="download at appstore" /></a>
+      <a href="/">
+        <img src={appstore} alt="download at appstore" />
+      </a>
     </NavStyles>
   );
 }
-
 
 const NavStyles = styled.nav`
   width: 80%;
@@ -52,7 +53,7 @@ const NavStyles = styled.nav`
     color: var(--dark-gray);
   }
   li a:last-child {
-  padding-right: none;
+    padding-right: none;
   }
 
   img {
@@ -61,7 +62,7 @@ const NavStyles = styled.nav`
     width: 100px;
     height: auto;
   }
-  .logo{
+  .logo {
     color: #221f20;
   }
 `;

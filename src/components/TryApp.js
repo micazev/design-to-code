@@ -14,8 +14,8 @@ export const TryApp = () => {
         </div>
         <h1>Try Tattoo Master App for free for 14 days</h1>
         <p>
-          The application provides access to a huge community around the world.
-          Download and try!
+          The application provides access <br />
+          to a huge community around the world. Download and try!
         </p>
         <img src={appstore} alt="" />
       </Content>
@@ -28,19 +28,41 @@ const TryAppStyles = styled.div`
   background: url(${tryapp}) no-repeat;
   background-position: right top;
   background-size: contain;
-  height: 50vh;
+  min-height: 50vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  grid-template-columns: 1fr 0.5fr;
   margin-top: 200px;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 const Content = styled.div`
   padding-left: 50px;
+  h1 {
+    margin: 20px;
+  }
   p {
     font-weight: bold;
+    margin-left: 30px;
   }
   img {
-    margin-top: 30px;
-    width: 150px;
+    margin: 30px 0 0 30px;
+    width: 120px;
+  }
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      margin-left: 0;
+    }
+    p {
+      margin-left: 0;
+    }
+    img {
+      width: 100px;
+      margin-left: 0;
+    }
   }
 `;
 

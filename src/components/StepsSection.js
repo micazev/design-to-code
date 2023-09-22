@@ -48,9 +48,6 @@ class StepsSection extends React.Component {
                   <div className="description">{lista.desc}</div>
                 </details>
               </li>
-
-              // <div onClick={()=>{this.setState((state, props) => ({show:!this.state.show}))}} className="dropdown"><h2>{lista.title}</h2><img src={arrow} alt="" /></div>
-              // { this.state.show? <p>{lista.desc}</p> : null}
             ))}
           </ul>
         </Content>
@@ -69,8 +66,8 @@ const StepsStyles = styled.div`
   text-align: left;
   display: grid;
   height: 50vh;
-  grid-template-columns: 1fr 1fr;
-  /* max-height: 50vh; */
+  grid-template-columns: 0.5fr 1fr;
+  max-height: 50vh;
   h1 {
     font-weight: bold;
     margin-bottom: 5vh;

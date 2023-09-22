@@ -49,6 +49,22 @@ function TestimonialsSection() {
               </div>
             </BoxInfo>
           </Box>
+
+          <Box>
+            <img src={tattoo2} alt="client tattoo 1" />
+            <BoxInfo>
+              <img className="avatar" src={avatar2} alt="client tattoo 1" />
+              <div className="info">
+                <div className="nome">Larry Perry</div>
+                <div className="comment">
+                  <p>
+                    Mira is a very kind master. I had a difficult order but it
+                    was fine!
+                  </p>
+                </div>
+              </div>
+            </BoxInfo>
+          </Box>
         </Boxes>
       </Content>
     </TestimonialsStyles>
@@ -62,11 +78,14 @@ const TestimonialsStyles = styled.div`
   background-position: left 50px center;
   background-size: contain;
   display: grid;
-  grid-template-columns: minmax(250px, 500px) 1fr;
+  grid-template-columns: 0.3fr 1fr;
   height: 50vh;
   img {
     width: auto;
     height: 100%;
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: 0.5fr 1fr;
   }
 `;
 
@@ -90,13 +109,16 @@ const Content = styled.div`
 const Boxes = styled.div`
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  // justify-content: flex-end;
   padding-right: 20px;
-  /* flex-wrap: wrap; */
   height: 300px;
   img {
     border-radius: 30px;
   }
+  @media (max-width: 700px) { 
+    & > div:not(:first-child) { 
+      display: none;
+    }
 `;
 const Box = styled.div`
   width: clamp(250px, 50%, 300px);

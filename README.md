@@ -1,8 +1,6 @@
 # MasterTattoo Landing Page
 
-Experience the landing page live on Netlify: [https://mastertattoo-landpage.netlify.app](https://mastertattoo-landpage.netlify.app).
-
-**Inspired by**: The original design on Dribbble can be found [here](https://dribbble.com/shots/12137524-Tattoo-Artist-website-landing-page-design-interaction).
+The original design on Dribbble can be found [here](https://dribbble.com/shots/12137524-Tattoo-Artist-website-landing-page-design-interaction).
 
 This project was initialized using [Create React App](https://github.com/facebook/create-react-app).
 
